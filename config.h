@@ -16,12 +16,12 @@ static const char col_gray2[]       = "#2e3440";
 static const char col_gray3[]       = "#81a1c1";
 static const char col_gray4[]       = "#e5e9f0";
 static const char col_cyan[]        = "#4c566a";
-static const char col1[]            = "#ffffff";
-static const char col2[]            = "#ffffff";
-static const char col3[]            = "#ffffff";
-static const char col4[]            = "#ffffff";
-static const char col5[]            = "#ffffff";
-static const char col6[]            = "#ffffff";
+static const char col1[]            = "#5e81ac";
+static const char col2[]            = "#bf616a";
+static const char col3[]            = "#d08770";
+static const char col4[]            = "#ebcb8b";
+static const char col5[]            = "#a3be8c";
+static const char col6[]            = "#b48ead";
 
 enum { SchemeNorm, SchemeCol1, SchemeCol2, SchemeCol3, SchemeCol4,
        SchemeCol5, SchemeCol6, SchemeSel }; /* color schemes */
