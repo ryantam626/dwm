@@ -8,4 +8,6 @@ xset r rate 200 25
 feh --bg-fill /home/ryan/dotfiles/wallpapers/selected
 /home/ryan/.fehbg &
 
+dwmblocks &
+
 exec dwm
