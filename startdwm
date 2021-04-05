@@ -5,4 +5,7 @@ export GTK_THEME="Nordic"
 
 xset r rate 200 25
 
-dwm
+feh --bg-fill /home/ryan/dotfiles/wallpapers/selected
+/home/ryan/.fehbg &
+
+exec dwm
