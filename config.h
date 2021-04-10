@@ -16,6 +16,7 @@ static const char col_gray2[]       = "#2e3440";
 static const char col_gray3[]       = "#81a1c1";
 static const char col_gray4[]       = "#e5e9f0";
 static const char col_cyan[]        = "#4c566a";
+static const char col_urgborder[]   = "#bf616a";
 static const char col1[]            = "#5e81ac";
 static const char col2[]            = "#bf616a";
 static const char col3[]            = "#d08770";
@@ -24,7 +25,7 @@ static const char col5[]            = "#a3be8c";
 static const char col6[]            = "#b48ead";
 
 enum { SchemeNorm, SchemeCol1, SchemeCol2, SchemeCol3, SchemeCol4,
-       SchemeCol5, SchemeCol6, SchemeSel }; /* color schemes */
+       SchemeCol5, SchemeCol6, SchemeSel, SchemeUrg }; /* color schemes */
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -36,6 +37,7 @@ static const char *colors[][3]      = {
 	[SchemeCol5]  = { col5,      col_gray1, col_gray2 },
 	[SchemeCol6]  = { col6,      col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeUrg]  = { col_gray4, col_cyan,  col_urgborder  },
 };
 
 /* tagging */
