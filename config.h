@@ -46,10 +46,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      	instance    title       tags mask     	isfloating   monitor */
-	{ "Gimp",     	NULL,       NULL,       0,            	1,           -1 },
-	{ "Firefox",  	NULL,       NULL,       1 << 8,       	0,           -1 },
-	{ "alacritty", 	NULL,       NULL,       2,		0,           -1 },
+	/* class      instance    title       tags mask     isfloating   monitor    scratch key */
+	{ "Gimp",     NULL,       NULL,       0,            1,           -1,        0  },
+	{ "firefox",  NULL,       NULL,       1 << 8,       0,           -1,        0  },
+	{ "alacritty", 	NULL,     NULL,       2,	    0,           -1,        0  },
+	{ NULL,       NULL,   "NoteScratchpad",   0,            1,           -1,       'n' },
 };
 
 /* layout(s) */
@@ -81,12 +82,15 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "run", "-theme", "nord" };
 static const char *termcmd[]  = { TERMINAL, NULL };
 
+static const char *notecmd[] = {"n", "alacritty",  "-t", "NoteScratchpad", "-e", "nvim", "/home/ryan/notes"};
+
 #include <X11/XF86keysym.h>
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_backslash,togglescratch,{.v = notecmd } },
 	{ MODKEY,                       XK_z,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
