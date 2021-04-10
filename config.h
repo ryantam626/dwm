@@ -5,7 +5,7 @@
 #define TERMCLASS "Alacritty"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -15,7 +15,8 @@ static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#2e3440";
 static const char col_gray3[]       = "#81a1c1";
 static const char col_gray4[]       = "#e5e9f0";
-static const char col_cyan[]        = "#4c566a";
+static const char col_gray5[]       = "#4c566a";
+static const char col_cyan[]        = "#88c0d0";
 static const char col_urgborder[]   = "#bf616a";
 static const char col1[]            = "#5e81ac";
 static const char col2[]            = "#bf616a";
@@ -36,8 +37,8 @@ static const char *colors[][3]      = {
 	[SchemeCol4]  = { col4,      col_gray1, col_gray2 },
 	[SchemeCol5]  = { col5,      col_gray1, col_gray2 },
 	[SchemeCol6]  = { col6,      col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeUrg]  = { col_gray4, col_cyan,  col_urgborder  },
+	[SchemeSel]  = { col_gray4, col_gray5,  col_cyan  },
+	[SchemeUrg]  = { col_gray4, col_gray5,  col_urgborder  },
 };
 
 /* tagging */
